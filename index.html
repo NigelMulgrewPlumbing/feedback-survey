@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Survey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+        <div class="flex justify-center mb-6">
+            <img src="logo.png" alt="Nigel Mulgrew Plumbing Logo" class="h-32">
+        </div>
+        <h1 class="text-2xl font-bold mb-6 text-center">Customer Feedback Survey</h1>
+        <p class="mb-4 text-gray-600">Thank you for choosing Nigel Mulgrew Plumbing! We value your feedback and would appreciate your responses to the following questions to help us improve.</p>
+        
+        <form action="https://formspree.io/f/xdkgendo" method="POST" id="feedbackForm" class="space-y-6">
+            <!-- Hidden field for email -->
+            <input type="hidden" name="_replyto" value="andrew@nigelmulgrewplumbing.com">
+
+            <!-- Question 1 -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">1. How likely are you to recommend our services to others?</label>
+                <div class="mt-2 space-y-2">
+                    <div>
+                        <input type="radio" id="q1-very-likely" name="q1" value="Very Likely" class="mr-2" required>
+                        <label for="q1-very-likely">Very Likely</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q1-likely" name="q1" value="Likely" class="mr-2">
+                        <label for="q1-likely">Likely</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q1-neutral" name="q1" value="Neutral" class="mr-2">
+                        <label for="q1-neutral">Neutral</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q1-unlikely" name="q1" value="Unlikely" class="mr-2">
+                        <label for="q1-unlikely">Unlikely</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q1-very-unlikely" name="q1" value="Very Unlikely" class="mr-2">
+                        <label for="q1-very-unlikely">Very Unlikely</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">2. How would you describe your overall experience working with our company?</label>
+                <div class="mt-2 space-y-2">
+                    <div>
+                        <input type="radio" id="q2-excellent" name="q2" value="Excellent" class="mr-2" required>
+                        <label for="q2-excellent">Excellent</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q2-good" name="q2" value="Good" class="mr-2">
+                        <label for="q2-good">Good</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q2-average" name="q2" value="Average" class="mr-2">
+                        <label for="q2-average">Average</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q2-poor" name="q2" value="Poor" class="mr-2">
+                        <label for="q2-poor">Poor</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q2-very-poor" name="q2" value="Very Poor" class="mr-2">
+                        <label for="q2-very-poor">Very Poor</label>
+                    </div>
+                    <div>
+                        <label for="q2-comments" class="block text-sm font-medium text-gray-700 mt-2">Additional comments (optional):</label>
+                        <textarea id="q2-comments" name="q2-comments" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">3. Did our services meet your expectations for quality of work?</label>
+                <div class="mt-2 space-y-2">
+                    <div>
+                        <input type="radio" id="q3-exceeded" name="q3" value="Exceeded Expectations" class="mr-2" required>
+                        <label for="q3-exceeded">Exceeded Expectations</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q3-met" name="q3" value="Met Expectations" class="mr-2">
+                        <label for="q3-met">Met Expectations</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q3-below" name="q3" value="Below Expectations" class="mr-2">
+                        <label for="q3-below">Below Expectations</label>
+                    </div>
+                    <div>
+                        <label for="q3-comments" class="block text-sm font-medium text-gray-700 mt-2">Additional comments (optional):</label>
+                        <textarea id="q3-comments" name="q3-comments" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">4. How would you rate the communication and collaboration during the project?</label>
+                <div class="mt-2 space-y-2">
+                    <div>
+                        <input type="radio" id="q4-excellent" name="q4" value="Excellent" class="mr-2" required>
+                        <label for="q4-excellent">Excellent</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q4-good" name="q4" value="Good" class="mr-2">
+                        <label for="q4-good">Good</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q4-average" name="q4" value="Average" class="mr-2">
+                        <label for="q4-average">Average</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q4-poor" name="q4" value="Poor" class="mr-2">
+                        <label for="q4-poor">Poor</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q4-very-poor" name="q4" value="Very Poor" class="mr-2">
+                        <label for="q4-very-poor">Very Poor</label>
+                    </div>
+                    <div>
+                        <label for="q4-comments" class="block text-sm font-medium text-gray-700 mt-2">Additional comments (optional):</label>
+                        <textarea id="q4-comments" name="q4-comments" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div>
+                <label for="q5-feedback" class="block text-sm font-medium text-gray-700">5. Do you have any additional feedback or suggestions for improvement?</label>
+                <textarea id="q5-feedback" name="q5-feedback" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+            </div>
+        </form>
+
+        <p class="mt-6 text-gray-600 text-center">Thank you for taking the time to complete this survey! Your input is invaluable to us.</p>
+    </div>
+</body>
+</html>
